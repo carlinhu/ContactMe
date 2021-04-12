@@ -17,7 +17,7 @@
     flex-direction: column;
     overflow-x: scroll;
     position: relative;
-    animation: change 10s ease-in-out infinite;
+    animation: change 7s ease-in-out infinite;
   }
   .title{
     position: absolute;
@@ -104,7 +104,7 @@
   .wrapper .tooltip{
     position: absolute;
     top: 850px;
-    left: 840px;
+    left: calc(50% - 200px);
     background: rgb(190, 190, 190);
     opacity: 0;
     font-size: 15px;
