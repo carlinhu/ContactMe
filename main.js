@@ -1,3 +1,4 @@
+
 window.addEventListener("DOMContentLoaded", function () {
   
     var form = document.getElementById("my-form");
@@ -36,3 +37,4 @@ window.addEventListener("DOMContentLoaded", function () {
     };
     xhr.send(data);
   }
+

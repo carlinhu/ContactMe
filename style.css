@@ -9,7 +9,7 @@
   section {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(45deg, #EE7752, #23A6D5, #23D5AB);
+    background: linear-gradient(45deg,#E73C7E, #23A6D5, #23D5AB);
     background-size: 400% 400%;
     display: flex;
     align-items: center;
@@ -70,6 +70,81 @@
   button[type="submit"]:hover {
     background-color: rgb(214, 226, 236);
   }
+
+  .wrapper .button{
+    position: fixed;
+    top: 800px;
+    left: 800px;
+
+    height: 60px;
+    width: 60px;
+    padding: 7px;
+    margin: 0 5px;
+    overflow: hidden;
+    background:  white;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #00000048;
+    transition: all 0.3s ease-out;
+  }
+
+  .wrapper .button span{
+    position: absolute;
+    line-height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    
+    margin-left: 10px;
+  }
+
+  .wrapper .button:hover{
+    width: 210px;
+  }
+
+  .wrapper .tooltip{
+    position: absolute;
+    top: 850px;
+    left: 840px;
+    background: rgb(190, 190, 190);
+    opacity: 0;
+    font-size: 15px;
+    padding: 10px 10px;
+    border-radius: 7px;
+    box-shadow: 0 0px 10px rgba(0,0,0,0.25);
+    pointer-events: none;
+    transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    
+  }
+
+  .wrapper:hover .tooltip{
+    top: 880px;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .wrapper .tooltip::before{
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    background: rgb(190, 190, 190);
+    top: -7px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+  }
+
+  .wrapper .button .icon
+  {
+    display: inline-block;
+    height: 46px;
+    width: 46px;
+
+    border-radius: 45px;
+    box-sizing: border-box;
+    line-height: 60px;
+
+  }
+
   #status {
     width: 90%;
     max-width: 500px;
@@ -113,3 +188,5 @@
       background-position: 0 50%;
     }
   }
+
+  

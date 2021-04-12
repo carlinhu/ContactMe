@@ -47,6 +47,30 @@
           </form>
         </div>
         <div id="status"></div>
+
+        <div class="wrapper">
+          <div id = "tp" class="tooltip">Copy to clipboard</div>
+          <div onclick='copyToClipboard()' class="button">
+            <img class = "icon" src="img/discordIcon.png">
+            <span id="discordId">Carlinhu#3159</span>  
+          </div>
+        </div>
+        
+        <script type="application/javascript">
+              
+          function copyToClipboard()
+          {
+            var copyText = document.getElementById("discordId");
+            var textArea = document.createElement("textarea");
+            textArea.value = copyText.textContent;
+            document.body.appendChild(textArea);
+            textArea.select();
+            document.execCommand("Copy");
+            textArea.remove();
+            var tooltip = document.getElementById("tp");
+            tooltip.textContent = 'Copied!';
+          }
+        </script>
       </section>
       <script src = "./main.js"></script>
 </body>
